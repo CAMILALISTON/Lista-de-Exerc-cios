@@ -61,13 +61,74 @@ function fatorial(){
     alert(r);
 }
 function multiplicacao(){
+    let n = Number(prompt("Digite um número!"));
+    let tabela = "";
+    //for(inicialização ; condição ; incremento){trecho que será repetido}
+    for(let mult = 1; mult <= 10 ; mult ++){
+        tabela += "\n"+n+" x "+mult+" = "+(n*mult);
+        }
+        alert(tabela);
+}
+
+function numerospares(){
+    let n = Number(prompt("Digite até que número você quer contar: "));
+    let pares = "";
+    for(let par = 1; par <= n ; par++){
+        if(par % 2 == 0){
+            pares +="\n"+par
+        }
+    }
+    alert(pares);
+}
+
+function passopersonalizado(){
+    let n = Number(prompt("Digite um número: "));
+    let passo = Number(prompt("Digite o passo: "));
+    let i = 1;
+    while(i<n){
+        alert(i);
+        i += passo;
+    }
 
 }
-function numerospares(){
-    let i = Number(prompt("Digite até que número você quer contar: "));
-    let nDet = 0
-    for(i=1; i <= nDet; i++){
-        i % 2 == 0
+
+function numerosimpares(){
+let n = Number(prompt("Digite até que número você quer contar: "));
+let impares = "";
+for(let impar = 1; impar <= n ; impar++){
+    if(impar % 2 != 0){
+        impares +="\n"+impar
     }
-    alert(i)
 }
+alert(impares);
+}
+
+function multiplos(){
+    let n1 = Number(prompt("Digite um número: "));
+    let n2 = Number(prompt("Digite o possivel número: "));
+    if(n2 % n1 == 0){
+        alert(n2 + " é múltiplo " +n1)
+    }
+    else
+    alert(n2 +" não é múltiplo "+n1)
+}
+
+function numeroprimo(){
+    let n = Number(prompt("Digite um número: "));
+    let qdtDivisores = 0;
+    for(let ant = 1; ant <= n; ant++){
+        if(n % ant == 0){
+        qdtDivisores++
+        }
+    }
+    if(qdtDivisores == 2){
+        alert(n + " é primo!")
+    }
+    else{
+    alert(n + " não é primo!")
+    }
+    
+}
+//Para um número ser considerado primo,
+//ele tem que ter EXCLUSIVAMENTE 2 divisores
+//tem que dividir por todos os anteriores e verificar quais dão zero.
