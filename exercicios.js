@@ -132,3 +132,22 @@ function numeroprimo(){
 //Para um número ser considerado primo,
 //ele tem que ter EXCLUSIVAMENTE 2 divisores
 //tem que dividir por todos os anteriores e verificar quais dão zero.
+
+function numeroprimo2(){
+    let n = Number(prompt("Digite um número: "));
+    let qdtDivisores = 0;
+    let tabela = "";
+    for(let ant = 1; ant <= n; ant++){
+        if(n % ant == 0){
+        qdtDivisores++
+    }
+
+    }
+    if(qdtDivisores == 2){
+        tabela += "\n" +ant 
+    }
+    else{
+        alert(n + " não é primo!")
+        }
+    alert("Os números primos são "+ tabela);
+}
