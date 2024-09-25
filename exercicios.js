@@ -133,21 +133,48 @@ function numeroprimo(){
 //ele tem que ter EXCLUSIVAMENTE 2 divisores
 //tem que dividir por todos os anteriores e verificar quais dão zero.
 
-function numeroprimo2(){
-    let n = Number(prompt("Digite um número: "));
+function verificaprimo(i){
     let qdtDivisores = 0;
-    let tabela = "";
-    for(let ant = 1; ant <= n; ant++){
-        if(n % ant == 0){
+    for(let ant = 1; ant <= i; ant++){
+        if(i % ant == 0){
         qdtDivisores++
-    }
-
+        }
     }
     if(qdtDivisores == 2){
-        tabela += "\n" +ant 
+        return true;
     }
     else{
-        alert(n + " não é primo!")
+        return false;
+    }
+    
+}
+
+// function numeroprimo(){
+//     let n = Number(prompt("Digite o número!"))
+//     let i = 1
+//     while(i<=n){
+//         if(verificaprimo(i) == true){
+//             alert(i + " é primo!")
+//         }
+//         else{
+//             alert(i + " não é primo!")
+//         }
+//         i ++;
+//     }
+
+// }
+
+function numeroprimo(){
+    let n = Number(prompt("Digite o número!"));
+    let tabela = "";
+        for(let i = 1; i <= n; i ++){
+        if(verificaprimo(i) == true){
+            tabela += (i + " é primo!\n");
         }
-    alert("Os números primos são "+ tabela);
+        else{
+            tabela += (i + " não é primo!\n");
+        }
+    }
+    alert(tabela);
+
 }
